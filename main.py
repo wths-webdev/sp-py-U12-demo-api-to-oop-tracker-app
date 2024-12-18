@@ -14,7 +14,6 @@ class Fruit:
     def display_info(self):
         print(f"Name: {self.name}")
         print(f"Family: {self.family}")
-        print(f"Genus: {self.genus}")
         print(f"Calories: {self.calories}")
         print(f"Sugar: {self.sugar}")
 
@@ -59,6 +58,11 @@ while True:
 
     # fetch fruit data using the API
     fruit_data = fetch_fruit_data(user_input)
+
+    # error handling: if fruit isn't found, continue in loop
+    if not fruit_data:
+        continue
+    
     # create an fruit object
     fruit_obj = create_fruit(fruit_data)
     fruit_obj.display_info()
