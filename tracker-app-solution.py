@@ -32,12 +32,12 @@ def fetch_fruit_data(fruit_name):
 # Create a Fruit object using the data
 def create_fruit(fruit_json):
     fruit = Fruit(
-        name = fruit_json.get("name"),
-        family = fruit_json.get("family"),
-        genus = fruit_json.get("genus"),
-        calories = fruit_json["nutritions"].get("calories"),
-        sugar = fruit_json["nutritions"].get("sugar")
-    )
+                    fruit_json["name"],
+                    fruit_json["family"],
+                    fruit_json["genus"],
+                    fruit_json["nutritions"]["calories"],
+                    fruit_json["nutritions"]["sugar"]
+                )
     return fruit
 
 print()
@@ -72,12 +72,13 @@ while True:
     print()
     keep_going = input("Track another fruit (y/n): ").lower().strip()
     if keep_going == "n":
-        print()
-        print("Here's your fruity breakdown for today:")
-        for fruit in fruits:
-            calories += fruit.calories
-            sugar += fruit.sugar
-        print(f"Calories: {calories}")
-        print(f"Sugar: {sugar}")
-        # end the program
         break
+
+# display summary to user
+print()
+print("Here's your fruity breakdown for today:")
+for fruit in fruits:
+    calories += fruit.calories
+    sugar += fruit.sugar
+print(f"Calories: {calories}")
+print(f"Sugar: {sugar}")
