@@ -17,14 +17,14 @@ This app uses the Fruityvice API to gather nutritional data of fruit. Simply ent
 
 * Fork this repo to create your own copy. 
 * Install the requests module:
-```
+```sh
 pip install requests
 ```
 
 ### Executing program
 
 * In your IDE, make sure you are in the project folder in the terminal and type:
-```
+```sh
 python tracker-app-solution.py
 ```
 
