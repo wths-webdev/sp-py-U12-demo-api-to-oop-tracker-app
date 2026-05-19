@@ -13,11 +13,17 @@ class Fruit:
 
     def __str__(self):
         return (
-            f"Name: {self.name}\n"
-            f"Family: {self.family}\n"
-            f"Calories: {self.calories}\n"
-            f"Sugar: {self.sugar}"
+            f"Name: {self.__name}\n"
+            f"Family: {self.__family}\n"
+            f"Calories: {self.__calories}\n"
+            f"Sugar: {self.__sugar}"
         )
+    
+    def get_calories(self):
+        return self.__calories
+    
+    def get_sugar(self):
+        return self.__sugar
 
 # Function to fetch data and return it
 def fetch_fruit_data(fruit_name):
@@ -80,7 +86,7 @@ while True:
 print()
 print("Here's your fruity breakdown for today:")
 for fruit in fruits:
-    calories += fruit.calories
-    sugar += fruit.sugar
+    calories += fruit.get_calories()
+    sugar += fruit.get_sugar()
 print(f"Calories: {calories}")
 print(f"Sugar: {sugar}")
