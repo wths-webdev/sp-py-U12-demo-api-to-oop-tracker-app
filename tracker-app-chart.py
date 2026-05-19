@@ -112,8 +112,10 @@ for fruit in fruits:
 
 # bar(x,y)
 plt.bar(fruit_names, fruit_calories)
-# google how to change the title
+
+# https://www.w3schools.com/Python/matplotlib_labels.asp
 plt.title("Fruit breakdown")
+
 plt.show()
 
 # make the bars horizontal instead. (check the w3schools link...)
