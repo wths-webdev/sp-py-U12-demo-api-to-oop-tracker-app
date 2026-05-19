@@ -5,17 +5,17 @@ import random
 # Define the Fruit class
 class Fruit:
     def __init__(self, name, family, genus, calories, sugar):
-        self.name = name
-        self.family = family
-        self.genus = genus
-        self.calories = calories
-        self.sugar = sugar
+        self.__name = name
+        self.__family = family
+        self.__genus = genus
+        self.__calories = calories
+        self.__sugar = sugar
 
-    def display_info(self):
-        print(f"Name: {self.name}")
-        print(f"Family: {self.family}")
-        print(f"Calories: {self.calories}")
-        print(f"Sugar: {self.sugar}")
+    def __str__(self):
+        print(f"Name: {self.__name}")
+        print(f"Family: {self.__family}")
+        print(f"Calories: {self.__calories}")
+        print(f"Sugar: {self.__sugar}")
 
 # Function to fetch data and return it
 def fetch_fruit_data(fruit_name):
@@ -65,7 +65,7 @@ while True:
     
     # create an fruit object
     fruit_obj = create_fruit(fruit_data)
-    fruit_obj.display_info()
+    print(fruit_obj)
     # append the fruit to our list
     fruits.append(fruit_obj)
 
