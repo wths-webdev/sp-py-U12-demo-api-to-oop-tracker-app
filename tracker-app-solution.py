@@ -12,10 +12,12 @@ class Fruit:
         self.__sugar = sugar
 
     def __str__(self):
-        print(f"Name: {self.__name}")
-        print(f"Family: {self.__family}")
-        print(f"Calories: {self.__calories}")
-        print(f"Sugar: {self.__sugar}")
+        return (
+            f"Name: {self.name}\n"
+            f"Family: {self.family}\n"
+            f"Calories: {self.calories}\n"
+            f"Sugar: {self.sugar}"
+        )
 
 # Function to fetch data and return it
 def fetch_fruit_data(fruit_name):
