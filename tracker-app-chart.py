@@ -116,9 +116,11 @@ plt.bar(fruit_names, fruit_calories)
 # https://www.w3schools.com/Python/matplotlib_labels.asp
 plt.title("Fruit breakdown")
 
-plt.show()
-
 # make the bars horizontal instead. (check the w3schools link...)
 
 # try the pie chart on your own!
 # https://www.w3schools.com/PYTHON/matplotlib_pie_charts.asp
+# you have to specify the parameter because there are multiple constructors (overloading).
+plt.pie(fruit_calories, labels=fruit_names)
+# talk about what to google after we see the plots on top of each other (need subplot)
+plt.show()
