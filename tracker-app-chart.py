@@ -121,6 +121,6 @@ plt.title("Fruit breakdown")
 # try the pie chart on your own!
 # https://www.w3schools.com/PYTHON/matplotlib_pie_charts.asp
 # you have to specify the parameter because there are multiple constructors (overloading).
-plt.pie(fruit_calories, labels=fruit_names)
+# plt.pie(fruit_calories, labels=fruit_names)
 # talk about what to google after we see the plots on top of each other (need subplot)
 plt.show()
